@@ -45,7 +45,7 @@ if ($request->getMethod() === 'POST') {
     $post = $request->getParsedBody();
     $secret = file_get_contents('../storage/secret.txt');
     $totp = new TOTP('Wiki', $secret, 30, 'sha512', 6);
-    if (!$totp->verify($post['passcode']) && false) {
+    if (!$totp->verify($post['passcode'])) {
         header('HTTP/1.1 403 Forbidden');
         die('Forbidden.');
     }
