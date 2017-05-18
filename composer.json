@@ -1,0 +1,18 @@
+{
+    "name": "zegnat/wiki",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martijn van der Ven",
+            "email": "martijn@vanderven.se"
+        }
+    ],
+    "require": {
+        "nyholm/psr7": "^0.2",
+        "zegnat/http-utilities": "dev-master",
+        "league/plates": "^3.3",
+        "erusev/parsedown": "^1.6",
+        "spomky-labs/otphp": "^8.3"
+    }
+}

@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #111111;
+}
+a:link, a:visited {
+    color: #0074D9;
+}
+a:hover, a:focus {
+    color: #001F3F;
+}
+a:active {
+    position: relative;
+    top: 1px;
+}
+header {
+    display: none;
+}
+main, footer {
+    display: block;
+    margin: 0;
+    padding: .3em 1.5em 3em;
+}
+main {
+    font-family: serif;
+    line-height: 1.4;
+    max-width: 35em;
+}
+h1, h2, h3 {
+    margin: 1em 0 0;
+}
+p {
+    margin: 0 0 1.4em;
+}
+h1 + p, h2 + p, h3 + p {
+    margin: 0;
+}
+p + p {
+    margin: 0;
+    text-indent: 1.4em;
+}
+footer {
+    font-family: sans-serif;
+    display: inline-block;
+    border-top: 2px solid grey;
+    line-height: 1.5;
+    padding-right: 5em;
+}
+footer > a {
+    text-decoration: none;
+    color: #111111 !important;
+}
+footer > a, footer > small {
+    font-size: 75%;
+    display: block;
+    position: relative;
+    padding-left: 1.3em;
+}
+footer > a::before, footer > small::before {
+    display: inline-block;
+    width: 1em;
+    position: absolute;
+    left: 0;
+    text-align: right;
+}
+footer > a[rel="home"]::before {
+    content: '🏠';
+}
+footer > a[rel="edit"]::before {
+    content: '✏️';
+}
+footer > a[rev]::before {
+    content: '📄';
+}
+footer > small::before {
+    content: '©';
+}
+
+/* Editor */
+label {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 .3em;
+}
+textarea, input {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    background: inherit;
+    padding: 5px;
+    margin: -6px -6px .5em -6px;
+    border: 1px solid #AAAAAA;
+    border-radius: 10px;
+}
+textarea {
+    width: 100%;
+    resize: vertical;
+    height: 35em;
+}
+textarea:focus, input:focus {
+    border-color: #0074D9;
+    outline: 0;
+}
+input[type="submit"] {
+    cursor: pointer;
+    padding: 5px 10px;
+}
+input + input {
+    margin-left: 12px;
+}
