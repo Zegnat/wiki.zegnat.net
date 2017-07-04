@@ -1,11 +1,77 @@
-* {
-    box-sizing: border-box;
-}
-html, body {
-    margin: 0;
-    padding: 0;
+/*! system-font.css v1.1.0 | CC0-1.0 License | github.com/jonathantneal/system-font-face */
+@font-face{font-family:system-ui;font-style:normal;font-weight:300;src:local(".SFNSText-Light"),local(".HelveticaNeueDeskInterface-Light"),local(".LucidaGrandeUI"),local("Segoe UI Light"),local("Ubuntu Light"),local("Roboto-Light"),local("DroidSans"),local("Tahoma")}
+@font-face{font-family:system-ui;font-style:italic;font-weight:300;src:local(".SFNSText-LightItalic"),local(".HelveticaNeueDeskInterface-Italic"),local(".LucidaGrandeUI"),local("Segoe UI Light Italic"),local("Ubuntu Light Italic"),local("Roboto-LightItalic"),local("DroidSans"),local("Tahoma")}
+@font-face{font-family:system-ui;font-style:normal;font-weight:400;src:local(".SFNSText-Regular"),local(".HelveticaNeueDeskInterface-Regular"),local(".LucidaGrandeUI"),local("Segoe UI"),local("Ubuntu"),local("Roboto-Regular"),local("DroidSans"),local("Tahoma")}
+@font-face{font-family:system-ui;font-style:italic;font-weight:400;src:local(".SFNSText-Italic"),local(".HelveticaNeueDeskInterface-Italic"),local(".LucidaGrandeUI"),local("Segoe UI Italic"),local("Ubuntu Italic"),local("Roboto-Italic"),local("DroidSans"),local("Tahoma")}
+@font-face{font-family:system-ui;font-style:normal;font-weight:500;src:local(".SFNSText-Medium"),local(".HelveticaNeueDeskInterface-MediumP4"),local(".LucidaGrandeUI"),local("Segoe UI Semibold"),local("Ubuntu Medium"),local("Roboto-Medium"),local("DroidSans-Bold"),local("Tahoma Bold")}
+@font-face{font-family:system-ui;font-style:italic;font-weight:500;src:local(".SFNSText-MediumItalic"),local(".HelveticaNeueDeskInterface-MediumItalicP4"),local(".LucidaGrandeUI"),local("Segoe UI Semibold Italic"),local("Ubuntu Medium Italic"),local("Roboto-MediumItalic"),local("DroidSans-Bold"),local("Tahoma Bold")}
+@font-face{font-family:system-ui;font-style:normal;font-weight:700;src:local(".SFNSText-Bold"),local(".HelveticaNeueDeskInterface-Bold"),local(".LucidaGrandeUI"),local("Segoe UI Bold"),local("Ubuntu Bold"),local("Roboto-Bold"),local("DroidSans-Bold"),local("Tahoma Bold")}
+@font-face{font-family:system-ui;font-style:italic;font-weight:700;src:local(".SFNSText-BoldItalic"),local(".HelveticaNeueDeskInterface-BoldItalic"),local(".LucidaGrandeUI"),local("Segoe UI Bold Italic"),local("Ubuntu Bold Italic"),local("Roboto-BoldItalic"),local("DroidSans-Bold"),local("Tahoma Bold")}
+
+/*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
+*,::before,::after{background-repeat:no-repeat;box-sizing:inherit}
+::before,::after{text-decoration:inherit;vertical-align:inherit}
+html{box-sizing:border-box;cursor:default;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+article,aside,footer,header,nav,section{display:block}
+body{margin:0}
+h1{font-size:2em;margin:.67em 0}
+figcaption,figure,main{display:block}
+figure{margin:1em 40px}
+hr{box-sizing:content-box;height:0;overflow:visible}
+nav ol,nav ul{list-style:none}
+pre{font-family:monospace,monospace;font-size:1em}
+a{background-color:transparent;-webkit-text-decoration-skip:objects}
+abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+b,strong{font-weight:inherit}
+b,strong{font-weight:bolder}
+code,kbd,samp{font-family:monospace,monospace;font-size:1em}
+dfn{font-style:italic}
+mark{background-color:#ffff00;color:#000000}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sub{bottom:-.25em}
+sup{top:-.5em}
+::-moz-selection{background-color:#b3d4fc;color:#000000;text-shadow:none}
+::selection{background-color:#b3d4fc;color:#000000;text-shadow:none}
+audio,canvas,iframe,img,svg,video{vertical-align:middle}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+img{border-style:none}
+svg{fill:currentColor}
+svg:not(:root){overflow:hidden}
+table{border-collapse:collapse}
+button,input,optgroup,select,textarea{margin:0}
+button,input,select,textarea{background-color:transparent;color:inherit;font-size:inherit;line-height:inherit}
+button,input{overflow:visible}
+button,select{text-transform:none}
+button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}
+button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}
+button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}
+legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}
+progress{display:inline-block;vertical-align:baseline}
+textarea{overflow:auto;resize:vertical}
+[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}
+[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}
+[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}
+[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+details,menu{display:block}
+summary{display:list-item}
+canvas{display:inline-block}
+template{display:none}
+a,area,button,input,label,select,summary,textarea,[tabindex]{-ms-touch-action:manipulation;touch-action:manipulation}
+[hidden]{display:none}
+[aria-busy="true"]{cursor:progress}
+[aria-controls]{cursor:pointer}
+[aria-hidden="false"][hidden]:not(:focus){clip:rect(0,0,0,0);display:inherit;position:absolute}
+[aria-disabled]{cursor:default}
+
+/*! Zegnat Wiki CSS */
+html {
     background-color: #FFFFFF;
     color: #111111;
+    font-family: system-ui;
+    line-height: 1.5;
 }
 a:link, a:visited {
     color: #0074D9;
@@ -17,73 +83,46 @@ a:active {
     position: relative;
     top: 1px;
 }
-header {
-    display: none;
-}
 main, footer {
-    display: block;
-    margin: 0;
+    max-width: 35em;
     padding: .3em 1.5em 3em;
 }
-main {
-    font-family: serif;
-    line-height: 1.4;
-    max-width: 35em;
-}
-h1, h2, h3 {
-    margin: 1em 0 0;
-}
-p, ul, ol {
-    margin: 0 0 1.4em;
-}
-h1 + p, h2 + p, h3 + p,
-h1 + ul, h2 + ul, h3 + ul,
-h1 + ol, h2 + ol, h3 + ol {
-    margin: 0;
-}
-p + p {
-    margin: 0;
-    text-indent: 1.4em;
-}
-hr {
-    margin: 2.5em 0 2.5em -1.5em;
-    width: 400px;
-    border: 1px solid grey;
-}
-footer {
-    font-family: sans-serif;
+
+/* Footer */
+body > footer {
     display: inline-block;
     border-top: 2px solid grey;
-    line-height: 1.5;
     padding-right: 5em;
 }
-footer > a {
+body > footer > a {
     text-decoration: none;
     color: #111111 !important;
 }
-footer > a, footer > small {
+body > footer > a,
+body > footer > small {
     font-size: 75%;
     display: block;
     position: relative;
     padding-left: 1.3em;
 }
-footer > a::before, footer > small::before {
+body > footer > a::before,
+body > footer > small::before {
     display: inline-block;
     width: 1em;
     position: absolute;
     left: 0;
     text-align: right;
 }
-footer > a[rel="home"]::before {
+body > footer > a[rel="home"]::before {
     content: '🏠';
 }
-footer > a[rel="edit"]::before {
+body > footer > a[rel="edit"]::before {
     content: '✏️';
 }
-footer > a[rev]::before {
+body > footer > a[rev]::before {
     content: '📄';
 }
-footer > small::before {
+body > footer > small::before {
     content: '©';
 }
 
@@ -94,10 +133,7 @@ label {
     margin: 0 0 .3em;
 }
 textarea, input {
-    font-size: inherit;
     font-family: inherit;
-    color: inherit;
-    background: inherit;
     padding: 5px;
     margin: -6px -6px .5em -6px;
     border: 1px solid #AAAAAA;
