@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?= $title !== 'Zegnåt' ? $title . ' ¶ ' : '' ?>Zegnåt</title>
         <link rel="stylesheet" href="/style.css">
+        <link rel="webmention" href="http://vanderven.se/martijn/mention.php">
     </head>
     <body>
         <main>

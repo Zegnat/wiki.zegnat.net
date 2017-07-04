@@ -36,6 +36,11 @@ if (!in_array($request->getMethod(), ['POST', 'HEAD', 'GET'])) {
     die('Method not allowed.');
 }
 
+if(trim($request->getUri()->getPath(), '/')==='m'){
+    header('Location: http://vanderven.se/martijn/', true, 302);
+    exit();
+}
+
 // Determine the page path and file path.
 $path = '/' . trim($request->getUri()->getPath(), '/');
 $file = '../storage' . ($path === '/' ? '/index' : $path) . '.md';
